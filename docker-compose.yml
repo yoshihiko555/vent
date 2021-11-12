@@ -1,0 +1,13 @@
+version: '3'
+services:
+  vent:
+    build: .
+    image: vent:latest
+    container_name: vent
+    ports:
+      - '3000:3000'
+      - '6006:6006'
+    working_dir: /usr/src
+    volumes:
+      - ./:/usr/src/
+    tty: true
